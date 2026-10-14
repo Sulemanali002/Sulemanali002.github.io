@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Suleman Ali — Machine Learning, Gilgit-Baltistan</title>
-<meta name="description" content="Suleman Ali, Computer Science graduate from Skardu, Pakistan. Machine Learning projects on glacier floods, flood risk and fake news. Open to MS research opportunities, 2027 intake.">
+<meta name="description" content="Suleman Ali, Computer Science graduate from Skardu, Pakistan. Machine Learning projects on glacier floods, flood risk and fake news. Open to research opportunities.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -123,22 +123,35 @@ a:focus-visible{outline:3px solid #1D78A3;outline-offset:3px}
   <a class="featured lift" href="https://github.com/Sulemanali002/GLOF_Risk_Classifier" target="_blank" rel="noopener">
     <div class="featured-text">
       <h2>GLOF Risk Classifier</h2>
-      <p>Predicting glacier lake outburst flood risk from 137 real recorded events across Gilgit-Baltistan, with my home valley of Chorbat, Ghanche as the story behind it.</p>
+      <p>Can basic facts about a glacier lake outburst flood, such as where, when and lake type, predict whether it had any recorded impact? A study of 137 events in Gilgit-Baltistan, with my home valley of Chorbat, Ghanche as the story behind it.</p>
       <span class="go">View the project →</span>
     </div>
     <div class="stats">
-      <div class="stat"><b>69.3%</b><span>cross-validated accuracy</span></div>
-      <div class="stat"><b>85.7%</b><span>on a single test split</span></div>
+      <div class="stat"><b>70.1%</b><span>best model, leave-one-out cross-validation</span></div>
       <div class="stat"><b>55.5%</b><span>majority-class baseline</span></div>
+      <div class="stat"><b>137</b><span>events in Gilgit-Baltistan</span></div>
     </div>
   </a>
+</section>
+
+<section id="case-study">
+  <p class="label">GLOF project: what I did and found</p>
+  <div class="grid">
+    <div class="card"><h3>The question</h3><p>Can where, when, lake type and trigger of a glacier lake outburst flood predict whether it had any recorded impact?</p></div>
+    <div class="card"><h3>The data</h3><p>HMAGLOFDB, a database of historical GLOFs. 137 of its 703 events are in Gilgit-Baltistan, and 61 had a recorded impact. "No impact recorded" does not mean no impact happened.</p></div>
+    <div class="card"><h3>The method</h3><p>Random Forest, Gradient Boosting, Decision Tree and Logistic Regression, tested with leave-one-out cross-validation against a 55.5% baseline.</p></div>
+    <div class="card"><h3>The result</h3><p>Gradient Boosting scored best at 70.1%. Tree models beat the baseline by about 14 points, and differences between them are within noise.</p></div>
+    <div class="card"><h3>What I learned</h3><p>Location and year carry most of the signal, so the model mostly learns where and when events were documented, not physical hazard. A single train/test split ranged from 50% to 89%, so I report cross-validated results.</p></div>
+    <div class="card"><h3>Next steps</h3><p>Add physical data such as glacier area, lake area, slope and temperature, and test on a larger regional dataset.</p></div>
+  </div>
+  <p style="margin:20px 0 0;font-size:14px;color:#5A6B74">Data: HMAGLOFDB, Shrestha et al. (2023), Earth System Science Data. <a href="https://github.com/Sulemanali002/GLOF_Risk_Classifier" target="_blank" rel="noopener" style="color:#1D78A3;font-weight:600">Full notebook and charts on GitHub →</a></p>
 </section>
 
 <section id="about">
   <div class="two">
     <div class="about">
       <h2>Research interests</h2>
-      <p>I want to do research in machine learning. So far I have applied it to glacier flood risk, flood prediction and fake news detection, and I want to keep exploring different problems under a research supervisor. I am applying for MS programs starting in 2027.</p>
+      <p>I want to work in machine learning and gradually move into the wider field of AI. So far I have worked on glacier flood risk, flood prediction and fake news detection, and I like learning by building real projects.</p>
     </div>
     <div class="timeline-wrap">
       <h2>Background</h2>
@@ -180,8 +193,8 @@ a:focus-visible{outline:3px solid #1D78A3;outline-offset:3px}
 
 <section id="contact" style="padding-bottom:0">
   <div class="cta">
-    <h2>Open to MS research opportunities</h2>
-    <p>Machine Learning &amp; AI · 2027 intake</p>
+    <h2>Open to research opportunities</h2>
+    <p>Machine Learning &amp; AI</p>
     <a class="btn dark" href="mailto:salmanali.cs2002@gmail.com">salmanali.cs2002@gmail.com</a>
   </div>
 </section>
