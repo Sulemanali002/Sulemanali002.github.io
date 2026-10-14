@@ -54,6 +54,33 @@ section{padding-bottom:72px}
 .cta h2{margin:0 0 10px;font-family:'Fraunces',serif;font-weight:500;font-size:clamp(28px,4vw,40px)}
 .cta p{margin:0 0 24px;color:#3E525C;font-size:16px}
 footer{text-align:center;color:#5A6B74;font-size:13px;margin-top:36px}
+
+/* hover effects */
+nav a{background:linear-gradient(#1D78A3,#1D78A3) left bottom/0 2px no-repeat;padding-bottom:3px;transition:background-size .25s ease,color .2s}
+nav a:hover{background-size:100% 2px}
+.btn{background-image:linear-gradient(#12232D,#12232D);background-repeat:no-repeat;background-size:0% 100%;transition:background-size .3s ease,color .3s ease,border-color .3s ease,transform .2s ease}
+.btn:hover{background-size:100% 100%;color:#fff;border-color:#12232D;transform:translateY(-2px)}
+.btn.dark{background-image:linear-gradient(#1D78A3,#1D78A3)}
+.btn.dark:hover{opacity:1;border-color:#1D78A3}
+.photo img{transition:transform .4s cubic-bezier(.2,.7,.3,1),box-shadow .4s ease}
+.photo img:hover{transform:scale(1.03) rotate(-1.5deg);box-shadow:0 32px 60px rgba(47,155,203,.35)}
+.lift{position:relative;overflow:hidden;transition:transform .3s cubic-bezier(.2,.7,.3,1),box-shadow .3s ease,border-color .3s ease}
+.lift>*{position:relative}
+.lift::before{content:"";position:absolute;inset:0;opacity:0;transition:opacity .3s ease;background:radial-gradient(360px circle at var(--mx,50%) var(--my,50%),rgba(47,155,203,.14),transparent 70%)}
+.featured.lift::before{background:radial-gradient(420px circle at var(--mx,50%) var(--my,50%),rgba(255,255,255,.12),transparent 70%)}
+.lift:hover::before{opacity:1}
+.lift:hover{transform:translateY(-6px);box-shadow:0 22px 44px rgba(18,35,45,.14)}
+.card::after{content:"\2197";position:absolute;top:22px;right:26px;font-size:22px;color:#1D78A3;opacity:0;transform:translate(-8px,8px);transition:opacity .3s ease,transform .3s ease}
+.card:hover::after{opacity:1;transform:translate(0,0)}
+.bar{transition:width .35s ease}
+.card:hover .bar{width:84px}
+.featured .go{display:inline-block;transition:transform .3s ease}
+.featured:hover .go{transform:translateX(8px)}
+.stat{transition:transform .3s ease,background .3s ease}
+.featured:hover .stat{background:rgba(255,255,255,.12)}
+.stat:hover{transform:translateY(-6px);background:rgba(242,182,80,.22)}
+a:focus-visible{outline:3px solid #1D78A3;outline-offset:3px}
+@media (hover:none){.lift:hover{transform:none;box-shadow:none}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
@@ -116,7 +143,7 @@ footer{text-align:center;color:#5A6B74;font-size:13px;margin-top:36px}
     </a>
   </div>
   <div class="links">
-    <a class="btn" href="Suleman_Ali_CV.pdf" target="_blank" rel="noopener">Download CV</a>
+    <a class="btn" href="Suleman_Ali_CV.pdf" download="Suleman_Ali_CV.pdf">Download CV</a>
     <a class="btn" href="certificates.html">Certifications</a>
     <a class="btn" href="photography.html">Photography</a>
   </div>
@@ -133,5 +160,14 @@ footer{text-align:center;color:#5A6B74;font-size:13px;margin-top:36px}
 
 <footer>© 2026 Suleman Ali · Skardu, Gilgit-Baltistan, Pakistan</footer>
 </div>
+<script>
+document.querySelectorAll('.lift').forEach(function(el){
+  el.addEventListener('mousemove',function(e){
+    var r=el.getBoundingClientRect();
+    el.style.setProperty('--mx',(e.clientX-r.left)+'px');
+    el.style.setProperty('--my',(e.clientY-r.top)+'px');
+  });
+});
+</script>
 </body>
 </html>
