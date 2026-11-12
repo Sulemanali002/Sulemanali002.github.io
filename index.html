@@ -120,15 +120,15 @@ a:focus-visible{outline:3px solid #1D78A3;outline-offset:3px}
 
 <section id="work">
   <p class="label">Featured project</p>
-  <a class="featured lift" href="https://github.com/Sulemanali002/GLOF_Risk_Classifier" target="_blank" rel="noopener">
+  <a class="featured lift" href="https://github.com/Sulemanali002/GLOF_Impact_Classifier" target="_blank" rel="noopener">
     <div class="featured-text">
-      <h2>GLOF Risk Classifier</h2>
+      <h2>GLOF Impact Classifier</h2>
       <p>Can basic facts about a glacier lake outburst flood, such as where, when and lake type, predict whether it had any recorded impact? A study of 137 events in Gilgit-Baltistan, with my home valley of Chorbat, Ghanche as the story behind it.</p>
       <span class="go">View the project →</span>
     </div>
     <div class="stats">
       <div class="stat"><b>70.1%</b><span>best model, leave-one-out cross-validation</span></div>
-      <div class="stat"><b>55.5%</b><span>majority-class baseline</span></div>
+      <div class="stat"><b>56.9%</b><span>majority-class baseline</span></div>
       <div class="stat"><b>137</b><span>events in Gilgit-Baltistan</span></div>
     </div>
   </a>
@@ -138,13 +138,13 @@ a:focus-visible{outline:3px solid #1D78A3;outline-offset:3px}
   <p class="label">GLOF project: what I did and found</p>
   <div class="grid">
     <div class="card"><h3>The question</h3><p>Can where, when, lake type and trigger of a glacier lake outburst flood predict whether it had any recorded impact?</p></div>
-    <div class="card"><h3>The data</h3><p>HMAGLOFDB, a database of historical GLOFs. 137 of its 703 events are in Gilgit-Baltistan, and 61 had a recorded impact. "No impact recorded" does not mean no impact happened.</p></div>
-    <div class="card"><h3>The method</h3><p>Random Forest, Gradient Boosting, Decision Tree and Logistic Regression, tested with leave-one-out cross-validation against a 55.5% baseline.</p></div>
-    <div class="card"><h3>The result</h3><p>Gradient Boosting scored best at 70.1%. Tree models beat the baseline by about 14 points, and differences between them are within noise.</p></div>
+    <div class="card"><h3>The data</h3><p>HMAGLOFDB, a database of historical GLOFs. 137 of its 703 events are in Gilgit-Baltistan, and 59 had a recorded impact. "No impact recorded" does not mean no impact happened.</p></div>
+    <div class="card"><h3>The method</h3><p>Random Forest, Gradient Boosting, Decision Tree and Logistic Regression, tested with leave-one-out cross-validation against a 56.9% baseline.</p></div>
+    <div class="card"><h3>The result</h3><p>Gradient Boosting scored best at 70.1%. Tree models beat the baseline by about 11 to 13 points, and differences between them are within noise.</p></div>
     <div class="card"><h3>What I learned</h3><p>Location and year carry most of the signal, so the model mostly learns where and when events were documented, not physical hazard. A single train/test split ranged from 50% to 89%, so I report cross-validated results.</p></div>
-    <div class="card"><h3>Next steps</h3><p>Add physical data such as glacier area, lake area, slope and temperature, and test on a larger regional dataset.</p></div>
+    <div class="card"><h3>Next steps</h3><p>Add physical data such as glacier area, lake area, slope and temperature, and validate on whole sub-basins the model has not seen.</p></div>
   </div>
-  <p style="margin:20px 0 0;font-size:14px;color:#5A6B74">Data: HMAGLOFDB, Shrestha et al. (2023), Earth System Science Data. <a href="https://github.com/Sulemanali002/GLOF_Risk_Classifier" target="_blank" rel="noopener" style="color:#1D78A3;font-weight:600">Full notebook and charts on GitHub →</a></p>
+  <p style="margin:20px 0 0;font-size:14px;color:#5A6B74">Data: HMAGLOFDB, Shrestha et al. (2023), Earth System Science Data. <a href="https://github.com/Sulemanali002/GLOF_Impact_Classifier" target="_blank" rel="noopener" style="color:#1D78A3;font-weight:600">Full notebook and charts on GitHub →</a> &nbsp;·&nbsp; <a href="https://doi.org/10.5281/zenodo.24134995" target="_blank" rel="noopener" style="color:#1D78A3;font-weight:600">Read the paper (Zenodo preprint) →</a></p>
 </section>
 
 <section id="about">
@@ -186,6 +186,7 @@ a:focus-visible{outline:3px solid #1D78A3;outline-offset:3px}
   </div>
   <div class="links">
     <a class="btn" href="Suleman_Ali_CV.pdf" download="Suleman_Ali_CV.pdf">Download CV</a>
+    <a class="btn" href="https://doi.org/10.5281/zenodo.24134995" target="_blank" rel="noopener">Read the Paper</a>
     <a class="btn" href="certificates.html">Certifications</a>
     <a class="btn" href="photography.html">Photography</a>
   </div>
